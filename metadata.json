@@ -1,0 +1,7 @@
+{
+  "name": "Smart QR Event Wallet",
+  "description": "A self-contained, secure, and cashless payment system for closed-loop events like school festivals. It features digital wallets for attendees, a simple payment app for vendors, and a central management dashboard for event organizers.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

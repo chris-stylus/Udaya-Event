@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart QR Event Wallet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '#4f46e5',
+                '50': '#eef2ff',
+                '100': '#e0e7ff',
+                '200': '#c7d2fe',
+                '300': '#a5b4fc',
+                '400': '#818cf8',
+                '500': '#6366f1',
+                '600': '#4f46e5',
+                '700': '#4338ca',
+                '800': '#3730a3',
+                '900': '#312e81',
+                '950': '#1e1b4b',
+              },
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "qrcode.react": "https://aistudiocdn.com/qrcode.react@^4.2.0"
+  }
+}
+</script>
+<style>
+      @media print {
+        body {
+            background-color: white;
+        }
+        body * {
+          visibility: hidden;
+        }
+        #pass-modal-container, #pass-modal-container * {
+          visibility: visible;
+        }
+        .print\:hidden {
+          display: none !important;
+        }
+        #pass-modal-container {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    </style>
+</head>
+  <body class="bg-gray-100 dark:bg-gray-900 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
